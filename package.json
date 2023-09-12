@@ -1,0 +1,45 @@
+{
+  "name": "nus-express-template",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc --build --clean && tsc",
+    "lint": "eslint src/**/*.ts",
+    "dev": "ts-node-dev --respawn --exit-child src/index.ts --watch",
+    "start": "node dist/index.js",
+    "postinstall": "tsc"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.0",
+    "@prisma/client": "^5.2.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.8.0",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.7.3",
+    "prisma": "^5.2.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/joi": "^17.2.3",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^16.7.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~5.1.6"
+  },
+  "prisma": {
+    "schema": "src/prisma/schema.prisma",
+    "seed": "ts-node src/prisma/seed.ts"
+  }
+}

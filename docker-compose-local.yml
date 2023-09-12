@@ -1,0 +1,18 @@
+version: '3'
+services:
+  db:
+    image: "postgres"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: nus
+      POSTGRES_PASSWORD: RaNdOMSt0nGP@assW0rd
+      POSTGRES_DB: test_task_db
+    volumes:
+      - ./dockerdb/mount:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
